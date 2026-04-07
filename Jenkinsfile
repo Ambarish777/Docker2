@@ -3,7 +3,7 @@ pipline{
   stages{
     stage('#1.Chekout'){
       steps{
-        git url:"https://github.com/Ambarish777/Docker2",branch:"main"
+        git url:"https://github.com/Ambarish777/Docker2.git",branch:"main"
       }
     }
 
@@ -22,7 +22,7 @@ pipline{
 
     stage('#4. Run the Image - Containerise'){
       steps{
-        bat 'docker run -d -p 9999:80 --name mycont mywebsite'
+        bat 'docker run -d -p 4006:80 --name mycont mywebsite'
       }
     }
   }
