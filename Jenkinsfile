@@ -15,7 +15,7 @@ pipline{
 
     stage('#3. Stop all old containers'){
       steps{
-        bat 'docker stop mycont ||exit 0'   //mycont-containername
+        bat 'docker stop mycont || exit 0'   //mycont-containername
         bat 'docker rm mycont || exit 0'
       }
     }
@@ -23,7 +23,6 @@ pipline{
     stage('#4. Run the Image - Containerise'){
       steps{
         bat 'docker run -d -p 6001:80 --name my cont mywebsite'
-        bat 'docker rm mycont || exit 0'
       }
     }
   }
